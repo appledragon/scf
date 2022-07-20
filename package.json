@@ -2,6 +2,7 @@
   "name": "scf",
   "displayName": "search contents in current file",
   "description": "search contents in current file",
+  "publisher": "cla",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.69.0"
