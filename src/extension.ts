@@ -13,28 +13,27 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('extension.scf',async () => {
+	let disposable = vscode.commands.registerCommand('extension.scf', async () => {
 		await searchInCurrentFile();
 	});
 	context.subscriptions.push(disposable);
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
 
 
 async function searchInCurrentFile(): Promise<void> {
 	const activeEditor = vscode.window.activeTextEditor;
 	if (!activeEditor) {
-	  return;
+		return;
 	}
 
 	const currentFilePath = vscode.workspace.asRelativePath(
-	  activeEditor.document.uri
+		activeEditor.document.uri
 	);
 	await vscode.commands.executeCommand("workbench.action.findInFiles", {
-	  // Fill-in selected text to query
-	  query: activeEditor.document.getText(activeEditor.selection),
-	  filesToInclude: currentFilePath,
+		query: activeEditor.document.getText(activeEditor.selection),
+		filesToInclude: currentFilePath,
 	});
-  }
+}
