@@ -7,6 +7,12 @@
   "engines": {
     "vscode": "^1.69.0"
   },
+
+  "homepage": "https://github.com/appledragon/scf",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/appledragon/scf"
+  },
   "categories": [
     "Other"
   ],
@@ -36,11 +42,6 @@
           "group": "navigation@0"
         }
       ]
-    },
-    "homepage": "https://github.com/appledragon/scf",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/appledragon/scf"
     }
   },
   "scripts": {
