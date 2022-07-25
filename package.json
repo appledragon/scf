@@ -3,7 +3,7 @@
   "displayName": "search current file",
   "description": "search current file",
   "publisher": "CuiLiAn",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icon": "assets/logo.png",
   "engines": {
     "vscode": "^1.69.0"
@@ -43,7 +43,14 @@
           "group": "navigation@0"
         }
       ]
-    }
+    },
+    "keybindings": [
+      {
+        "command": "extension.scf",
+        "key": "alt+s",
+        "mac": "alt+s",
+        "when": "editorTextFocus"
+      }]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
