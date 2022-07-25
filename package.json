@@ -3,10 +3,10 @@
   "displayName": "search current file",
   "description": "search current file",
   "publisher": "CuiLiAn",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "assets/logo.png",
   "engines": {
-    "vscode": "^1.69.0"
+    "vscode": "^1.40.0"
   },
   "keywords": ["vscode", "search", "current", "file"],
   "homepage": "https://github.com/appledragon/scf",
