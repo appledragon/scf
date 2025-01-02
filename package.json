@@ -8,17 +8,19 @@
   "engines": {
     "vscode": "^1.40.0"
   },
-  "keywords": ["vscode", "search", "current", "file"],
+  "keywords": [
+    "vscode",
+    "search",
+    "current",
+    "file"
+  ],
   "homepage": "https://github.com/appledragon/scf",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/appledragon/scf"
+    "type": "git",
+    "url": "https://github.com/appledragon/scf"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:extension.scf"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -31,14 +33,14 @@
     "menus": {
       "editor/title/context": [
         {
-          "when": "",
+          "when": "editorTextFocus",
           "command": "extension.scf",
           "group": "navigation@0"
         }
       ],
       "editor/context": [
         {
-          "when": "",
+          "when": "editorTextFocus",
           "command": "extension.scf",
           "group": "navigation@0"
         }
@@ -50,29 +52,22 @@
         "key": "alt+s",
         "mac": "alt+s",
         "when": "editorTextFocus"
-      }]
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
-  },
-  "Ï": {
-    "@types/vscode": "^1.69.0",
-    "@types/glob": "^7.2.0",
-    "@types/mocha": "^9.1.1",
-    "@types/node": "16.x",
-    "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.0",
-    "eslint": "^8.18.0",
-    "mocha": "^10.0.0",
-    "typescript": "^4.7.4",
-    "@vscode/test-electron": "^2.1.5"
+    "lint": "eslint src --ext ts"
   },
   "dependencies": {
     "module-name": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/node": "^22.10.3",
+    "glob": "^7.2.0",
+    "vscode": "^1.1.34"
   }
 }
